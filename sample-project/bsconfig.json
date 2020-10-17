@@ -1,0 +1,17 @@
+{
+  "rootDir": "src",
+  "files": [
+    "manifest",
+    "source/**/*.*",
+    "components/**/*.*",
+    "images/**/*.*"
+  ],
+  "diagnosticFilters": [
+    {
+      "src": "**/roku_modules/**/*.*",
+      "codes": [
+        1107
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "roku-image-fader-sample",
+  "version": "0.1.0",
+  "description": "Roku Animated Poster sample project",
+  "dependencies": {
+    "if": "file:../"
+  },
+  "devDependencies": {
+    "brighterscript": "^0.15.0",
+    "ropm": "^0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokucommunity/roku-image-fader.git"
+  },
+  "keywords": [],
+  "author": "George Cook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rokucommunity/roku-image-fader/issues"
+  },
+  "homepage": "https://github.com/rokucommunity/roku-image-fader#readme",
+  "ts-node": {
+    "transpileOnly": true,
+    "compileOptions": {
+      "incremental": true,
+      "allowJs": false
+    }
+  },
+  "ropm": {
+    "rootDir": "src",
+    "packageRootDir": "dist"
+  },
+  "scripts": {
+    "build": "npx bsc"
+  }
+}

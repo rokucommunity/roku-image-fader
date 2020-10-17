@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<component
+    name='MainScene'
+    extends='Scene'>
+
+  <script
+      type='text/brightscript'
+      uri='./MainScene.brs' />
+  <interface>
+    <field
+        id='fire'
+        alias='timer.fire'
+        onChange='onTimerFire' />
+  </interface>
+  <children>
+    <Timer
+        id='timer'
+        duration='3'
+        repeat='true'
+        control='start' />
+    <if_ImageFader
+        id='imageFader'
+        scaleMode='scaleToFit'
+        width='1920'
+        height='1080' />
+  </children>
+</component>

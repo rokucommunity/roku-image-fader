@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component
+    name='ImageFader'
+    extends='Rectangle'>
+  <interface>
+    <field
+        id='uri'
+        type='string' />
+    <field
+        id='isAnimated'
+        type='boolean'
+        value='true' />
+    <!--Set color of background while image is loading.-->
+    <field
+        id='ShadeOpacity'
+        type='float'
+        alias='shade.opacity' />
+    <field
+        id='scaleMode'
+        type='string'
+        alias='scaleToZoom' />
+    <field
+        id='backgroundColor'
+        alias='backgroundColor.color' />
+    <!-- args = {uri: string, isAnimated: boolean} -->
+    <function name='changeImage' />
+  </interface>
+
+  <children>
+    <Rectangle
+        id='backgroundColor'
+        color='0x000000FF' />
+    <Poster id='oldBackground' />
+    <Poster
+        id='background'
+        opacity='0' />
+    <Rectangle
+        id='shade'
+        color='0x000000'
+        opacity='0.65' />
+
+    <Animation
+        id='fadeoutAnimation'
+        repeat='false'
+        duration='0.5'>
+      <FloatFieldInterpolator
+          id='oldbackgroundInterpolator'
+          key='[0.0, 1.0]'
+          keyValue='[1.0, 0.0]'
+          fieldToInterp='oldBackground.opacity' />
+    </Animation>
+
+    <Animation
+        id='fadeinAnimation'
+        repeat='false'
+        easeFunction='linear'
+        duration='0.5'>
+      <FloatFieldInterpolator
+          id='backgroundInterpolator'
+          key='[0.0, 1.0]'
+          keyValue='[0.0, 1.0]'
+          fieldToInterp='background.opacity' />
+    </Animation>
+  </children>
+</component>
