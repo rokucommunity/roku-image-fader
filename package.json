@@ -1,7 +1,7 @@
 {
     "name": "roku-image-fader",
     "version": "0.1.0",
-    "description": "Poster replacement, which facililitates sprite-sheet based animation",
+    "description": "Fades an image in roku scene graph",
     "scripts": {
         "preversion": "npm run validate",
         "validate": "bsc --create-package=false --copy-to-staging=false"
