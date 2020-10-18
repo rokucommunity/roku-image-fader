@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "if": "file:../"
+  },
+  "devDependencies": {
+    "ropm": "^0.6.3"
+  }
+}

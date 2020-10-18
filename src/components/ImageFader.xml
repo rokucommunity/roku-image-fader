@@ -62,4 +62,5 @@
           fieldToInterp='background.opacity' />
     </Animation>
   </children>
+  <script uri="ImageFader.brs" />
 </component>
