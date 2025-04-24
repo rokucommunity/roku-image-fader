@@ -4,7 +4,8 @@
     "description": "Fades an image in roku scene graph",
     "scripts": {
         "preversion": "npm run validate",
-        "validate": "bsc --create-package=false --copy-to-staging=false"
+        "validate": "bsc --create-package=false --copy-to-staging=false",
+        "package": "npm run build && npm pack"
     },
     "files": [
         "src/**/*"
